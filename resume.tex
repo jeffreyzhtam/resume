@@ -1,0 +1,214 @@
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+ \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+\newcommand{\classCourse}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\classCourseListStart}{\begin{itemize}}
+\newcommand{\classCourseListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Jeffrey Tam} \\ \vspace{1pt}
+    \small 857-234-2991 $|$ \href{mailto:jeffrey.zh.tam@gmail.com}{\underline{jeffrey.zh.tam@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/jeffreyzhtam}{\underline{linkedin.com/in/jeffreyzhtam}} $|$
+    \href{https://github.com/jeffreyzhtam}{\underline{https://github.com/jeffreyzhtam}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Wentworth Institute of Technology}{Boston, MA}
+      {Bachelor of Engineering in Computer Science - GPA: 3.98/4.00}{Aug. 2023 -- May 2027}
+
+  \resumeSubHeadingListEnd
+
+%------Relevant Coursework-------
+\section{Relevant Coursework}
+\vspace*{-\baselineskip}
+    \begin{multicols}{3}
+        \classCourseListStart
+            \classCourse{Data Structures}
+            \classCourse{Algorithms}
+            \classCourse{Computer Science I \& II}
+            \classCourse{Operating Systems}
+            \classCourse{Network Programming}
+            \classCourse{Computer Organization}
+            \classCourse{Linear Algebra}
+            \classCourse{Discrete Mathematics}
+            \classCourse{Calculus I \& II}
+        \classCourseListEnd
+    \end{multicols}
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Coding Tutor}{Sep. 2024 -- Present}
+      {CodeWiz}{Quincy, MA}
+      \resumeItemListStart
+        \resumeItem{Taught foundational coding concepts such as loops, variables, and functions using beginner-friendly programming languages and tools}
+        \resumeItem{Encouraged problem-solving and creativity by guiding students through interactive projects}
+        \resumeItem{Provided individualized support to help students overcome specific challenges, boosting their confidence and skills}
+        \resumeItem{Tracked and reported progress, offering constructive feedback to students and parents to celebrate achievements and identify growth areas}
+      \resumeItemListEnd
+
+
+
+
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{The Odin Project} $|$ \emph{JavaScript, HTML, CSS}{ (Personal)}}{June 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Completed the full-stack web development curriculum through The Odin Project}
+            \resumeItem{Developed dynamic and interactive projects}
+            \resumeItem{Gained proficiency in version control through Git and GitHub, managing my repositories}
+            \resumeItem{Built a portfolio of projects showcasing end-to-end development skills, from design to deployment}
+          \resumeItemListEnd    
+
+        \resumeProjectHeading
+          {\textbf{Uno Card Game} $|$ \emph{Java}{ (Group)}}{November 2023 -- December 2023}
+          \resumeItemListStart
+            \resumeItem{Designed and developed a functional Uno card game using Java, implementing core game mechanics such as turn-taking, card drawing, and rule enforcement}
+            \resumeItem{Utilized object-oriented programming (OOP) principles to design a modular and maintainable codebase, including classes for players, cards, and game logic.}
+            \resumeItem{Implemented game logic for special cards (e.g., Skip, Reverse, Draw Two, Wild), ensuring adherence to standard Uno rules.}
+            \resumeItem{Collaborated with peers to troubleshoot bugs and optimize game performance, ensuring smooth execution.}
+          \resumeItemListEnd    
+
+          
+    \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, JavaScript, HTML/CSS, RISC-V Assembly} \\
+     \textbf{Developer Tools}{: Git, GitHub, VS Code, Eclipse, Virtual Box} \\
+     \textbf{Operating Systems}{: Linux OS, Windows}
+    }}
+ \end{itemize}
+
+
+%----Certifications and Achievements---------------
+\section{Certification and Achievements}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Wentworth Honor's Cohort}\\
+     \textbf{Wentworth Dean's List}{: Fall 23', Spring 23', Fall 24'} \\
+     \textbf{LeetCode}{: Top 15\%} }}
+ \end{itemize}
+
+
+\end{document}
