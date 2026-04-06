@@ -1,30 +1,17 @@
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\usepackage{color}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{multicol}
-\setlength{\columnsep}{-0.5cm}
+\usepackage{twemojis}
 \input{glyphtounicode}
+\usepackage{charter}
 
- \usepackage{charter}
+\pagestyle{empty}
 
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
+% Adjust margins (fullpage baseline + tweak)
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -32,31 +19,32 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-
 \setlength{\footskip}{4.1pt}
-% Sections formatting
+
+% Sections
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1 \vspace{-2pt}}}
 }
-\newcommand{\classCourse}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+
+\newcommand{\resumeSubheadingExtra}[8]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\footnotesize#5} & \textit{\footnotesize #6} \\
+      \textit{\footnotesize#7} & \textit{\footnotesize #8} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -67,133 +55,96 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\classCourseListStart}{\begin{itemize}}
-\newcommand{\classCourseListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
 \begin{center}
-    \textbf{\Huge \scshape Jeffrey Tam} \\ \vspace{1pt}
-    \small 857-234-2991 $|$ \href{mailto:jeffrey.zh.tam@gmail.com}{\underline{jeffrey.zh.tam@gmail.com}} $|$ 
-    \href{https://linkedin.com/in/jeffreyzhtam}{\underline{linkedin.com/in/jeffreyzhtam}} 
+  \textbf{\Huge \scshape Jeffrey Tam} \\ \vspace{1pt}
+  \small
+  \href{tel:+18572342991}{857-234-2991}
+  \,$|$\,
+  \href{mailto:jeffrey.zh.tam@gmail.com}{\underline{jeffrey.zh.tam@gmail.com}}
+  \,$|$\,
+  \href{https://linkedin.com/in/jeffreyzhtam}{\underline{linkedin.com/in/jeffreyzhtam}}
+  \,$|$\,
+  \href{https://github.com/jeffreyzhtam}{\underline{github.com/jeffreyzhtam}}
 \end{center}
 
-
-%-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
+    \resumeSubheadingExtra
       {Wentworth Institute of Technology}{Boston, MA}
-      {Bachelor of Science in Computer Science - GPA: 3.98/4.00}{Aug. 2023 -- May 2027}
-
+      {B.S.\ in Computer Science; minors in Data Science and Applied Mathematics\textbf{; GPA: 3.9/4.0}}{Aug.\ 2023 -- May 2027}
+      {Honors Cohort; Dean's List}{}
+      {Upsilon Pi Epsilon Honor Society}{}
+      \resumeItemListStart
+        \resumeItem{\textbf{Coursework:} Data Structures \& Algorithms, Operating Systems, Computer Organization, Programming Languages, Machine Learning, Network Programming, Databases, Data Science Fundamentals, Object-Oriented Programming I \& II}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%------Relevant Coursework-------
-\section{Relevant Coursework}
-\vspace*{-\baselineskip}
-    \begin{multicols}{3}
-        \classCourseListStart
-            \classCourse{Object-Oriented Programming I \& II}
-            \classCourse{Data Structures \& Algorithms}
-            \classCourse{Operating Systems}
-            \classCourse{Databases}
-            \classCourse{Network Programming}
-            \classCourse{Computer Organization}
-        \classCourseListEnd
-    \end{multicols}
-%-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Coding Tutor}{Sep. 2024 -- Present}
-      {CodeWiz}{Quincy, MA}
+      {IT Co-op}{Jan.\ 2026 -- Apr.\ 2026}
+      {Boston Water \& Sewer Commission}{Boston, MA}
       \resumeItemListStart
-        \resumeItem{Taught foundational coding concepts such as loops, variables, and functions using beginner-friendly programming languages and tools}
-        \resumeItem{Encouraged problem-solving and creativity by guiding students through interactive projects}
-        \resumeItem{Provided individualized support to help students overcome specific challenges, boosting their confidence and skills}
-        \resumeItem{Tracked and reported progress, offering constructive feedback to students and parents to celebrate achievements and identify growth areas}
+        \resumeItem{Diagnosed and resolved Windows desktop, software, and network issues for a 500+ person organization; documented recurring failures to speed future fixes}
+        \resumeItem{Automated Active Directory account workflows (provisioning, groups, permissions) for 50+ users, reducing manual errors and standardizing access}
+        \resumeItem{Helped build a SmartDeploy USB deployment stick that cut device reimaging time by about 80\% compared with the prior workflow}
+        \resumeItem{Imaged, deployed, and configured 30+ workstations using a repeatable build aligned to organizational standards}
       \resumeItemListEnd
 
-
-
+    \resumeSubheading
+      {Coding Tutor}{Sep.\ 2024 -- Dec.\ 2025}
+      {CodeWiz}{Quincy, MA}
+      \resumeItemListStart
+        \resumeItem{Taught core programming concepts (loops, variables, functions, debugging) using beginner-friendly languages and tools}
+        \resumeItem{Supported 10+ students weekly with individualized coaching; improved project completion rates and student confidence}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-
-%-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {{\href{https://price-scraper-ebon.vercel.app/}{\textbf{\underline{Price Scraper}}~\texttwemoji{link}}} $|$ \emph{Python, Next.js, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Vercel}}{}
+      \resumeItemListStart
+        \resumeItem{Built a responsive UI (Tailwind CSS, DaisyUI) that sends queries to a Python API for side-by-side price results across major retailers}
+        \resumeItem{Integrated multiple e-commerce APIs to fetch and normalize real-time product data across retailers}
+        \resumeItem{Cut average query latency about 30\% by normalizing API payloads, tightening DB access patterns, and adding indexes where needed}
+        \resumeItem{Persisted normalized listings in PostgreSQL (Supabase) and deployed the frontend on Vercel}
+      \resumeItemListEnd
 
-        \resumeProjectHeading
-          {\textbf{Uno Card Game} $|$ \emph{Java}{ (Group)}}{November 2023 -- December 2023}
-          \resumeItemListStart
-            \resumeItem{Designed and developed a functional Uno card game using Java, implementing core game mechanics such as turn-taking, card drawing, and rule enforcement}
-            \resumeItem{Utilized object-oriented programming (OOP) principles to design a modular and maintainable codebase, including classes for players, cards, and game logic.}
-            \resumeItem{Implemented game logic for special cards (e.g., Skip, Reverse, Draw Two, Wild), ensuring adherence to standard Uno rules.}
-            \resumeItem{Collaborated with peers to troubleshoot bugs and optimize game performance, ensuring smooth execution.}
-          \resumeItemListEnd   
+    \resumeProjectHeading
+      {\textbf{Cross-Platform FTP Server} $|$ \emph{Python, sockets, multithreading}}{}
+      \resumeItemListStart
+        \resumeItem{Built a multithreaded FTP server in Python (full Windows, partial macOS) for large file transfers without typical browser upload limits}
+        \resumeItem{Added host-controlled IP allow/deny and QR/link handoff so sessions start quickly on the LAN}
+        \resumeItem{Used a multithreaded model to serve 20+ concurrent clients without connection races or resource starvation under stress tests}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-        \resumeProjectHeading
-          {\textbf{The Odin Project} $|$ \emph{JavaScript, HTML, CSS}{ (Personal)}}{June 2023 -- Present}
-          \resumeItemListStart
-            \resumeItem{Completed the full-stack web development curriculum through The Odin Project}
-            \resumeItem{Developed dynamic and interactive projects}
-            \resumeItem{Gained proficiency in version control through Git and GitHub, managing my repositories}
-            \resumeItem{Built a portfolio of projects showcasing end-to-end development skills, from design to deployment}
-          \resumeItemListEnd    
-
-          
-    \resumeSubHeadingListEnd
-
-%
-%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C, SQL, JavaScript, HTML/CSS, RISC-V Assembly} \\
-     \textbf{Developer Tools}{: Git, GitHub, MySql, VS Code, Eclipse, Virtual Box} \\
-     \textbf{Operating Systems}{: Linux OS, Windows}
-    }}
- \end{itemize}
-
-
-%----Certifications and Achievements---------------
-\section{Certification and Achievements}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{CodePath Intermediate Interview Prep Course}{: Spring 25'}\\
-     \textbf{Wentworth Dean's List}{: Fall 23', Spring 23', Fall 24'} \\
-     \textbf{HackerRank Problem Solving Basic}\\
-     \textbf{Wentworth Honor's Cohort}\\
-     \textbf{LeetCode}{: Top 15\%} }}\\
- \end{itemize}
-
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small
+    \item{
+      \textbf{Languages:} Java, C, Python, JavaScript, TypeScript, SQL, R, F\#, Prolog \\
+      \textbf{Frameworks \& tools:} Spring Boot, Next.js, Tailwind CSS, Docker, Git, Pandas, NumPy, Supabase, PostgreSQL, MySQL, DBeaver, VirtualBox, Wireshark \\
+      \textbf{IDEs:} VS Code, IntelliJ, Eclipse, Visual Studio, Cursor
+    }
+  \end{itemize}
 
 \end{document}
